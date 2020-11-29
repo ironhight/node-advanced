@@ -8,8 +8,8 @@ console.log('🚀 ~ file: index.ts ~ line 7 ~ test', test);
 
 const config = {
   NODE_ENV: process.env.NODE_ENV,
-  MONGO_URL: process.env.MONGO_URI || "mongodb://127.0.0.1:27017/blog_dev",
-  CACHE: process.env.CACHE,
+  MONGO_URL: process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/blog_dev',
+  CACHE: process.env.CACHE || 'redis://127.0.0.1:6379',
   PORT: process.env.PORT || 5000,
 };
 
