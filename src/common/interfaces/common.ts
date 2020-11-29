@@ -1,3 +1,3 @@
-export interface ICacheOptions {
-  key: string;
+export interface IObject<T> {
+  [key: string]: T;
 }

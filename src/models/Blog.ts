@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import { IBlogModel } from '../common/interfaces/model';
 
 const { Schema } = mongoose;
 
@@ -10,6 +11,5 @@ const blogSchema = new Schema({
   _user: { type: Schema.Types.ObjectId, ref: 'User' },
 });
 
-const Blog = mongoose.model('Blog', blogSchema);
-
+const Blog = mongoose.model<IBlogModel>('Blog', blogSchema);
 export = Blog;
