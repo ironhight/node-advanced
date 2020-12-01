@@ -1,11 +1,9 @@
-import mongoose from 'mongoose';
+import { Schema, model } from 'mongoose';
 import { IUserModel } from '../common/interfaces/model';
-const { Schema } = mongoose;
 
-const userSchema = new Schema({
+const UserSchema = new Schema({
   googleId: String,
   displayName: String,
 });
 
-const User = mongoose.model<IUserModel>('User', userSchema);
-export = User;
+export default model<IUserModel>('User', UserSchema);
