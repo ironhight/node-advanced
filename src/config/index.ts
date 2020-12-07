@@ -2,7 +2,7 @@ import * as dotenv from 'dotenv';
 import path from 'path';
 
 const test = dotenv.config({
-  path: path.resolve(__dirname, './envs' + (process.env.NODE_ENV as string) + '.env'),
+  path: path.resolve(__dirname, './envs/' + (process.env.NODE_ENV as string) + '.env'),
 });
 console.log('🚀 ~ file: index.ts ~ line 7 ~ test', test);
 
